@@ -1,0 +1,93 @@
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#05070b" />
+    <title>BreachPoint | Security Dashboard</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="CSS/styles.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <a class="brand" href="index.html#home" aria-label="BreachPoint home"><img class="brand-icon" src="breachpoint-mark.svg" alt="" /><span>Breach</span><strong>Point</strong></a>
+      <nav class="main-nav" aria-label="Main navigation">
+        <a class="active" href="index.html#home"><svg class="nav-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="m3 10 9-7 9 7v10a1 1 0 0 1-1 1h-5v-7H9v7H4a1 1 0 0 1-1-1z" /></svg>Home</a>
+        <a href="scan.html"><svg class="nav-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7V5a1 1 0 0 1 1-1h2m10 0h2a1 1 0 0 1 1 1v2M20 17v2a1 1 0 0 1-1 1h-2m-10 0H5a1 1 0 0 1-1-1v-2" /><path d="m8 12 2.5 2.5L16 9" /></svg>Scan</a>
+        <a href="analysis.html"><svg class="nav-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 19V5m0 14h17" /><path d="m7 15 4-4 3 2 5-6" /><path d="M17 7h2v2" /></svg>Analyze</a>
+        <a href="history.html"><svg class="nav-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 12a9 9 0 1 0 2.6-6.4L3 8" /><path d="M3 3v5h5m4-1v5l3 2" /></svg>History</a>
+        <a href="settings.html"><svg class="nav-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 8a4 4 0 1 0 0 8 4 4 0 0 0 0-8Z" /><path d="m19.4 15 .1.1 1.1.9-1.5 2.6-1.4-.6a8 8 0 0 1-1.5.9l-.2 1.5h-3l-.3-1.5a8 8 0 0 1-1.5-.9l-1.4.6-1.5-2.6 1.1-.9a7 7 0 0 1 0-1.8l-1.1-.9 1.5-2.6 1.4.6a8 8 0 0 1 1.5-.9l.3-1.5h3l.2 1.5a8 8 0 0 1 1.5.9l1.4-.6 1.5 2.6-1.1.9a7 7 0 0 1-.1 1.8Z" /></svg>Settings</a>
+      </nav>
+      <button class="profile" type="button" data-profile-control aria-label="Open Kato Aye profile">
+        <span class="avatar" aria-hidden="true"><span data-profile-initials>KA</span><img data-profile-avatar-image alt="" hidden /></span>
+        <span data-profile-name>Kato Aye</span>
+      </button>
+    </header>
+
+    <main id="home" class="dashboard">
+      <img class="wave-art" src="CSS/wave-background.svg" alt="" aria-hidden="true" />
+      <section class="scan-visual" aria-label="Daily link scan total">
+        <svg class="gauge" viewBox="0 0 434 434" aria-hidden="true">
+          <defs>
+            <linearGradient id="gauge-gradient" x1="0%" y1="50%" x2="100%" y2="50%">
+              <stop offset="0" stop-color="#0be8aa" />
+              <stop offset="52%" stop-color="#13c7d4" />
+              <stop offset="100%" stop-color="#08aee8" />
+            </linearGradient>
+          </defs>
+          <circle class="gauge-progress" cx="217" cy="217" r="192" />
+          <g class="gauge-ticks" aria-hidden="true">
+            <path class="gauge-tick-minor" d="M98 317 89 324 M71 164 60 160 M98 117 89 110 M190 63 188 51 M244 63 246 51 M336 117 345 110 M363 164 374 160 M363 270 374 274 M336 317 345 324" />
+            <path class="gauge-tick-major" d="M71 270 60 274 M62 217 50 217 M140 83 134 73 M295 83 301 73 M372 217 384 217" />
+          </g>
+        </svg>
+        <div class="gauge-value"><strong>365</strong><span>/ day</span></div>
+        <p class="gauge-caption">Total Links Scanned</p>
+      </section>
+
+      <div class="dashboard-grid">
+        <section class="risk-grid" aria-label="Threat levels">
+          <article class="risk-card critical">
+            <div class="risk-heading"><h2>Critical</h2><span class="trend-icon" aria-hidden="true">↗</span></div>
+            <div class="risk-value"><strong>89</strong><span>Link</span></div>
+            <span class="risk-change">+15%</span>
+          </article>
+          <article class="risk-card high">
+            <div class="risk-heading"><h2>High</h2><span class="trend-icon" aria-hidden="true">↗</span></div>
+            <div class="risk-value"><strong>95</strong><span>Link</span></div>
+            <span class="risk-change">+10%</span>
+          </article>
+          <article class="risk-card medium">
+            <div class="risk-heading"><h2>Medium</h2><span class="trend-icon" aria-hidden="true">↗</span></div>
+            <div class="risk-value"><strong>150</strong><span>Link</span></div>
+          </article>
+        </section>
+
+        <section class="summary-panel" aria-labelledby="summary-title">
+          <h2 id="summary-title">Statistical Summary</h2>
+          <div class="summary-list">
+            <article class="summary-item">
+              <span class="calendar-icon" aria-hidden="true">✓</span>
+              <div class="summary-copy"><strong>Daily Scanned</strong><small>Today, 11:30</small></div>
+              <span class="summary-total">550 Links</span>
+            </article>
+            <article class="summary-item">
+              <span class="calendar-icon" aria-hidden="true">✓</span>
+              <div class="summary-copy"><strong>Weekly Scanned</strong><small>Today, 11:30</small></div>
+              <span class="summary-total">1,570 Links</span>
+            </article>
+            <article class="summary-item">
+              <span class="calendar-icon" aria-hidden="true">✓</span>
+              <div class="summary-copy"><strong>Monthly Scanned</strong><small>Today, 11:30</small></div>
+              <span class="summary-total">6,102 Links</span>
+            </article>
+          </div>
+        </section>
+      </div>
+
+    </main>
+
+    <script src="JS/app.js" defer></script>
+  </body>
+</html>

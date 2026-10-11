@@ -1,0 +1,73 @@
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#080c18" />
+    <title>Safety Report | BreachPoint</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="CSS/styles.css" />
+  </head>
+  <body class="report-body">
+    <header class="topbar">
+      <a class="brand" href="index.html#home" aria-label="BreachPoint home"><img class="brand-icon" src="breachpoint-mark.svg" alt="" /><span>Breach</span><strong>Point</strong></a>
+      <nav class="main-nav" aria-label="Main navigation">
+        <a href="index.html#home"><svg class="nav-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="m3 10 9-7 9 7v10a1 1 0 0 1-1 1h-5v-7H9v7H4a1 1 0 0 1-1-1z" /></svg>Home</a>
+        <a href="scan.html"><svg class="nav-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7V5a1 1 0 0 1 1-1h2m10 0h2a1 1 0 0 1 1 1v2M20 17v2a1 1 0 0 1-1 1h-2m-10 0H5a1 1 0 0 1-1-1v-2" /><path d="m8 12 2.5 2.5L16 9" /></svg>Scan</a>
+        <a class="active" href="analysis.html" aria-current="page"><svg class="nav-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 19V5m0 14h17" /><path d="m7 15 4-4 3 2 5-6" /><path d="M17 7h2v2" /></svg>Analyze</a>
+        <a href="history.html"><svg class="nav-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 12a9 9 0 1 0 2.6-6.4L3 8" /><path d="M3 3v5h5m4-1v5l3 2" /></svg>History</a>
+        <a href="settings.html"><svg class="nav-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 8a4 4 0 1 0 0 8 4 4 0 0 0 0-8Z" /><path d="m19.4 15 .1.1 1.1.9-1.5 2.6-1.4-.6a8 8 0 0 1-1.5.9l-.2 1.5h-3l-.3-1.5a8 8 0 0 1-1.5-.9l-1.4.6-1.5-2.6 1.1-.9a7 7 0 0 1 0-1.8l-1.1-.9 1.5-2.6 1.4.6a8 8 0 0 1 1.5-.9l.3-1.5h3l.2 1.5a8 8 0 0 1 1.5.9l1.4-.6 1.5 2.6-1.1.9a7 7 0 0 1-.1 1.8Z" /></svg>Settings</a>
+      </nav>
+        <span class="report-profile"><span class="avatar" aria-hidden="true"><span data-profile-initials>KA</span><img data-profile-avatar-image alt="" hidden /></span><span data-profile-name>Kato Aye</span></span>
+    </header>
+
+    <main class="report-page">
+      <img class="wave-art report-wave" src="CSS/wave-background.svg" alt="" aria-hidden="true" />
+      <div class="report-topline">
+        <div>
+          <p class="report-eyebrow">Sample analysis</p>
+          <h1>Safety Report</h1>
+        </div>
+        <div class="report-actions">
+          <button class="share-button" type="button">Share</button>
+          <a class="analyze-button" href="scan.html">Analyze Again</a>
+        </div>
+      </div>
+
+      <section class="assessment-panel" aria-labelledby="assessment-title">
+        <div class="trust-score" role="img" aria-label="Sample trust score 48 out of 100">
+          <div class="trust-score-ring"><strong>48</strong><span>TRUST SCORE</span></div>
+        </div>
+        <div class="assessment-copy">
+          <div class="assessment-tags"><span class="severity-tag">High</span><span class="category-tag">Scam / Phishing / Emotional Manipulation</span></div>
+          <h2 id="assessment-title">Risk Assessment</h2>
+          <p class="assessment-intro">Based on AI analysis of your submitted content, here's what we found.</p>
+          <div class="content-preview">
+            <span>ANALYZED CONTENT PREVIEW</span>
+            <p>URGENT: Your bank account has been temporarily suspended due to suspicious activity. To restore access, click this link immediately: example.invalid/verify and enter your banking credentials within 24 hours or your account may be permanently closed.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="category-grid" aria-label="Risk category scores">
+        <article class="category-card"><div><span>Fake News</span><strong>0</strong></div><span class="category-track"><span style="--score: 0%"></span></span></article>
+        <article class="category-card"><div><span>Scam Risk</span><strong>57</strong></div><span class="category-track"><span style="--score: 57%"></span></span></article>
+        <article class="category-card"><div><span>Harassment</span><strong>0</strong></div><span class="category-track"><span style="--score: 0%"></span></span></article>
+        <article class="category-card"><div><span>Manipulation</span><strong>57</strong></div><span class="category-track"><span style="--score: 57%"></span></span></article>
+      </section>
+
+      <section class="detected-panel" aria-labelledby="detected-title">
+        <h2 id="detected-title">Detected Flags</h2>
+        <ul class="flag-list">
+          <li>Urgent language detected</li>
+          <li>Suspicious link or click request</li>
+          <li>Possible phishing attempt</li>
+          <li>Emotional manipulation</li>
+        </ul>
+      </section>
+    </main>
+
+    <script src="JS/app.js" defer></script>
+  </body>
+</html>

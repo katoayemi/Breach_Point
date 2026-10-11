@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 470" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <linearGradient id="wave-color" x1="0" x2="1" y1="0" y2="0">
+      <stop offset="0" stop-color="#00b8ca" stop-opacity=".28" />
+      <stop offset=".42" stop-color="#04e8d0" stop-opacity=".92" />
+      <stop offset=".72" stop-color="#16e89b" stop-opacity=".95" />
+      <stop offset="1" stop-color="#00d993" stop-opacity=".48" />
+    </linearGradient>
+    <linearGradient id="wave-fill" x1="0" x2="0" y1="0" y2="1">
+      <stop offset="0" stop-color="#0bd6c3" stop-opacity=".16" />
+      <stop offset="1" stop-color="#00a67f" stop-opacity="0" />
+    </linearGradient>
+    <filter id="wave-glow" x="-20%" y="-80%" width="140%" height="260%">
+      <feGaussianBlur stdDeviation="7" />
+    </filter>
+    <g id="river-lines">
+      <path fill="none" stroke="url(#wave-color)" stroke-width="18" opacity=".2" filter="url(#wave-glow)" d="M0 220 C120 220 180 292 325 302 C465 312 510 204 650 207 C800 210 835 286 980 280 C1130 274 1205 146 1320 144 C1380 143 1410 220 1440 220" />
+      <path fill="none" stroke="url(#wave-color)" stroke-width="1.7" filter="drop-shadow(0 0 5px rgba(22,244,196,.8))" d="M0 220 C120 220 180 292 325 302 C465 312 510 204 650 207 C800 210 835 286 980 280 C1130 274 1205 146 1320 144 C1380 143 1410 220 1440 220" />
+      <path fill="none" stroke="url(#wave-color)" stroke-width="1.4" d="M0 252 C130 252 195 324 335 334 C475 344 520 236 665 238 C810 240 850 316 995 312 C1140 308 1215 176 1325 174 C1385 173 1410 252 1440 252" />
+      <path fill="none" stroke="url(#wave-color)" stroke-width="1" opacity=".38" d="M0 288 C150 288 225 355 385 367 C545 379 575 270 725 271 C875 272 905 344 1045 342 C1185 340 1245 214 1345 212 C1395 211 1420 288 1440 288" />
+      <path fill="none" stroke="url(#wave-color)" stroke-width="1" opacity=".38" d="M0 325 C140 325 225 392 375 405 C525 418 585 307 745 308 C895 309 935 381 1065 379 C1205 377 1265 261 1365 259 C1405 258 1425 325 1440 325" />
+    </g>
+    <style>
+      .river-wave-track { transform-box: view-box; transform-origin: 0 0; animation: river-flow 26s linear infinite; }
+      .shield-sway { transform-box: fill-box; transform-origin: center; animation: shield-sway 8s ease-in-out infinite alternate; }
+      @keyframes river-flow {
+        to { transform: translateX(100%); }
+      }
+      @keyframes shield-sway {
+        from { transform: translateY(-1px) rotate(-1deg); }
+        to { transform: translateY(1px) rotate(1deg); }
+      }
+      @media (prefers-reduced-motion: reduce) {
+        .river-wave-track, .shield-sway { animation: none; }
+      }
+    </style>
+  </defs>
+  <g transform="translate(410 100) scale(.78)" opacity=".38">
+    <g class="shield-sway">
+      <path d="M0-48 42-32v29c0 26-17 47-42 61C-25 44-42 23-42-3v-29z" fill="#0b1b24" fill-opacity=".72" stroke="#9ce6e8" stroke-opacity=".42" stroke-width="4" stroke-linejoin="round" />
+      <path d="M0-34 29-23v22c0 19-11 34-29 45C-18 33-29 18-29-1v-22z" fill="none" stroke="#8ccbd3" stroke-opacity=".3" stroke-width="3" />
+      <path d="m-14 1 10 10 20-23" fill="none" stroke="#a8e7e4" stroke-opacity=".5" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" />
+    </g>
+  </g>
+  <g transform="translate(1110 196) scale(1.05)" opacity=".34">
+    <g class="shield-sway">
+      <path d="M0-48 42-32v29c0 26-17 47-42 61C-25 44-42 23-42-3v-29z" fill="#0b1b24" fill-opacity=".72" stroke="#9ce6e8" stroke-opacity=".42" stroke-width="4" stroke-linejoin="round" />
+      <path d="M0-34 29-23v22c0 19-11 34-29 45C-18 33-29 18-29-1v-22z" fill="none" stroke="#8ccbd3" stroke-opacity=".3" stroke-width="3" />
+      <path d="m-14 1 10 10 20-23" fill="none" stroke="#a8e7e4" stroke-opacity=".5" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" />
+    </g>
+  </g>
+  <path class="wave-fill-shape" fill="url(#wave-fill)" opacity=".65" d="M0 55 C120 125 185 210 310 214 C405 218 438 171 522 194 C603 216 617 322 760 315 C884 309 930 337 1012 308 C1121 270 1163 160 1280 90 C1348 49 1395 29 1440 17 L1440 370 C1321 389 1240 379 1158 351 C1067 319 1010 355 925 369 C824 385 750 351 665 380 C555 418 488 330 391 327 C271 324 219 386 106 359 C61 349 28 331 0 317 Z" />
+  <g class="river-wave-track"><use href="#river-lines" /></g>
+  <g class="river-wave-track"><g transform="translate(-1440 0)"><use href="#river-lines" /></g></g>
+</svg>

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#05070b" />
+    <title>Settings | BreachPoint</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="CSS/styles.css" />
+  </head>
+  <body class="settings-body">
+    <header class="topbar">
+      <a class="brand" href="index.html#home" aria-label="BreachPoint home"><img class="brand-icon" src="breachpoint-mark.svg" alt="" /><span>Breach</span><strong>Point</strong></a>
+      <nav class="main-nav" aria-label="Main navigation">
+        <a href="index.html#home"><svg class="nav-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="m3 10 9-7 9 7v10a1 1 0 0 1-1 1h-5v-7H9v7H4a1 1 0 0 1-1-1z" /></svg>Home</a>
+        <a href="scan.html"><svg class="nav-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7V5a1 1 0 0 1 1-1h2m10 0h2a1 1 0 0 1 1 1v2M20 17v2a1 1 0 0 1-1 1h-2m-10 0H5a1 1 0 0 1-1-1v-2" /><path d="m8 12 2.5 2.5L16 9" /></svg>Scan</a>
+        <a href="analysis.html"><svg class="nav-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 19V5m0 14h17" /><path d="m7 15 4-4 3 2 5-6" /><path d="M17 7h2v2" /></svg>Analyze</a>
+        <a href="history.html"><svg class="nav-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 12a9 9 0 1 0 2.6-6.4L3 8" /><path d="M3 3v5h5m4-1v5l3 2" /></svg>History</a>
+        <a class="active" href="settings.html" aria-current="page"><svg class="nav-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 8a4 4 0 1 0 0 8 4 4 0 0 0 0-8Z" /><path d="m19.4 15 .1.1 1.1.9-1.5 2.6-1.4-.6a8 8 0 0 1-1.5.9l-.2 1.5h-3l-.3-1.5a8 8 0 0 1-1.5-.9l-1.4.6-1.5-2.6 1.1-.9a7 7 0 0 1 0-1.8l-1.1-.9 1.5-2.6 1.4.6a8 8 0 0 1 1.5-.9l.3-1.5h3l.2 1.5a8 8 0 0 1 1.5.9l1.4-.6 1.5 2.6-1.1.9a7 7 0 0 1-.1 1.8Z" /></svg>Settings</a>
+      </nav>
+      <span class="report-profile"><span class="avatar" data-profile-avatar aria-hidden="true"><span data-profile-initials>KA</span><img data-profile-avatar-image alt="" hidden /></span><span data-profile-name>Kato Aye</span></span>
+    </header>
+
+    <main class="settings-page">
+      <div class="settings-heading">
+        <p class="report-eyebrow">Account & protection</p>
+        <h1>Settings</h1>
+        <p>Manage your profile, analysis preferences, and security alerts.</p>
+      </div>
+
+      <form class="settings-form" id="settings-form">
+      <section class="settings-section" aria-labelledby="profile-settings-title">
+        <div class="settings-section-heading">
+          <span class="settings-section-icon" aria-hidden="true">01</span>
+          <div><h2 id="profile-settings-title">Profile</h2><p>Your account details</p></div>
+        </div>
+        <div class="profile-settings-body">
+          <div class="settings-avatar-column">
+            <div class="settings-avatar" data-profile-avatar aria-hidden="true"><span data-profile-initials>KA</span><img data-profile-avatar-image alt="" hidden /></div>
+            <label class="photo-upload">Choose photo<input id="profile-photo" type="file" accept="image/*" /></label>
+            <button class="remove-photo" id="remove-photo" type="button">Remove photo</button>
+          </div>
+          <div class="settings-fields">
+            <label class="settings-field"><span>Full name</span><input id="profile-name" name="profileName" type="text" value="Kato Aye" maxlength="60" required /></label>
+            <label class="settings-field"><span>Email address</span><input id="profile-email" name="profileEmail" type="email" placeholder="name@example.com" /></label>
+          </div>
+        </div>
+      </section>
+
+      <section class="settings-section" aria-labelledby="analysis-settings-title">
+        <div class="settings-section-heading">
+          <span class="settings-section-icon" aria-hidden="true">02</span>
+          <div><h2 id="analysis-settings-title">Analysis Preferences</h2><p>Choose what the security engine checks</p></div>
+        </div>
+        <div class="settings-options">
+          <label class="settings-field"><span>Default analysis type</span><select id="analysis-type" name="analysisType"><option>Automatic detection</option><option>Link or QR code</option><option>Message or email</option></select></label>
+          <label class="settings-field"><span>Detection sensitivity</span><select id="detection-sensitivity" name="sensitivity"><option>Balanced</option><option>Strict</option><option>Relaxed</option></select></label>
+          <label class="settings-toggle"><span><strong>Show detailed findings</strong><small>Include risk categories and detected evidence in reports.</small></span><input id="show-details" name="showDetails" type="checkbox" checked /></label>
+        </div>
+      </section>
+
+      <section class="settings-section" aria-labelledby="notification-settings-title">
+        <div class="settings-section-heading">
+          <span class="settings-section-icon" aria-hidden="true">03</span>
+          <div><h2 id="notification-settings-title">Notifications</h2><p>Choose which updates you receive</p></div>
+        </div>
+        <div class="settings-options">
+          <label class="settings-toggle"><span><strong>High-risk alerts</strong><small>Notify me when submitted content has a high risk score.</small></span><input id="high-risk-alerts" name="highRiskAlerts" type="checkbox" checked /></label>
+          <label class="settings-toggle"><span><strong>Scan completion</strong><small>Notify me when a report is ready.</small></span><input id="scan-completion" name="scanCompletion" type="checkbox" checked /></label>
+          <label class="settings-toggle"><span><strong>Weekly security summary</strong><small>Send a weekly overview of scans and detected threats.</small></span><input id="weekly-summary" name="weeklySummary" type="checkbox" /></label>
+        </div>
+      </section>
+
+      <section class="settings-section" aria-labelledby="privacy-settings-title">
+        <div class="settings-section-heading">
+          <span class="settings-section-icon" aria-hidden="true">04</span>
+          <div><h2 id="privacy-settings-title">Privacy & Data</h2><p>Control how your analysis history is handled</p></div>
+        </div>
+        <div class="settings-options">
+          <label class="settings-toggle"><span><strong>Save scan history</strong><small>Keep past reports available in your History page.</small></span><input id="save-history" name="saveHistory" type="checkbox" checked /></label>
+          <label class="settings-toggle"><span><strong>Include submitted content in reports</strong><small>Show a short content preview in the safety report.</small></span><input id="include-content" name="includeContent" type="checkbox" checked /></label>
+        </div>
+      </section>
+        <div class="settings-save-row"><p id="settings-status" aria-live="polite"></p><button class="save-settings" type="submit">Save changes</button></div>
+      </form>
+    </main>
+    <script src="JS/app.js" defer></script>
+  </body>
+</html>

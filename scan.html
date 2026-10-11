@@ -1,0 +1,75 @@
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#05070b" />
+    <title>Scan Link | BreachPoint</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="CSS/styles.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <a class="brand" href="index.html#home" aria-label="BreachPoint home"><img class="brand-icon" src="breachpoint-mark.svg" alt="" /><span>Breach</span><strong>Point</strong></a>
+      <nav class="main-nav" aria-label="Main navigation">
+        <a href="index.html#home"><svg class="nav-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="m3 10 9-7 9 7v10a1 1 0 0 1-1 1h-5v-7H9v7H4a1 1 0 0 1-1-1z" /></svg>Home</a>
+        <a class="active" href="scan.html" aria-current="page"><svg class="nav-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7V5a1 1 0 0 1 1-1h2m10 0h2a1 1 0 0 1 1 1v2M20 17v2a1 1 0 0 1-1 1h-2m-10 0H5a1 1 0 0 1-1-1v-2" /><path d="m8 12 2.5 2.5L16 9" /></svg>Scan</a>
+        <a href="analysis.html"><svg class="nav-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 19V5m0 14h17" /><path d="m7 15 4-4 3 2 5-6" /><path d="M17 7h2v2" /></svg>Analyze</a>
+        <a href="history.html"><svg class="nav-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 12a9 9 0 1 0 2.6-6.4L3 8" /><path d="M3 3v5h5m4-1v5l3 2" /></svg>History</a>
+        <a href="settings.html"><svg class="nav-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 8a4 4 0 1 0 0 8 4 4 0 0 0 0-8Z" /><path d="m19.4 15 .1.1 1.1.9-1.5 2.6-1.4-.6a8 8 0 0 1-1.5.9l-.2 1.5h-3l-.3-1.5a8 8 0 0 1-1.5-.9l-1.4.6-1.5-2.6 1.1-.9a7 7 0 0 1 0-1.8l-1.1-.9 1.5-2.6 1.4.6a8 8 0 0 1 1.5-.9l.3-1.5h3l.2 1.5a8 8 0 0 1 1.5.9l1.4-.6 1.5 2.6-1.1.9a7 7 0 0 1-.1 1.8Z" /></svg>Settings</a>
+      </nav>
+      <button class="profile" type="button" data-profile-control aria-label="Open Kato Aye profile">
+        <span class="avatar" aria-hidden="true"><span data-profile-initials>KA</span><img data-profile-avatar-image alt="" hidden /></span>
+        <span data-profile-name>Kato Aye</span>
+      </button>
+    </header>
+
+    <main class="scanner-page">
+      <img class="wave-art scan-wave" src="CSS/wave-background.svg" alt="" aria-hidden="true" />
+      <div class="scanner-content">
+        <h1 id="scanner-title">Scan Link</h1>
+        <div class="risk-meter" role="img" aria-label="Risk score 30 out of 100, unsafe">
+          <div class="meter-arc"></div>
+          <div class="meter-needle"></div>
+          <div class="meter-hub"></div>
+          <span class="meter-status">Unsafe</span>
+        </div>
+        <div class="scan-form" aria-label="Choose content to scan">
+          <div class="scan-mode-controls" role="tablist" aria-label="Content type">
+            <button class="scan-mode active" type="button" role="tab" aria-selected="true" data-scan-mode="link">Link</button>
+            <button class="scan-mode" type="button" role="tab" aria-selected="false" data-scan-mode="image">Image</button>
+            <button class="scan-mode" type="button" role="tab" aria-selected="false" data-scan-mode="message">Message</button>
+          </div>
+          <div class="scan-mode-panel" data-scan-panel="link" role="tabpanel">
+            <label class="visually-hidden" for="url-input">URL to scan</label>
+            <div class="url-field">
+              <input id="url-input" type="url" value="https://github.com/evan9908/Setup/raw/main/umr.exe" />
+              <span class="search-symbol" aria-hidden="true">⌕</span>
+            </div>
+          </div>
+          <div class="scan-mode-panel" data-scan-panel="image" role="tabpanel" hidden>
+            <input class="visually-hidden" id="image-input" type="file" accept="image/*" />
+            <label class="scan-file-picker" for="image-input"><span class="scan-file-icon" aria-hidden="true">＋</span><span><strong>Choose an image</strong><small id="image-file-name">PNG, JPG, or other image formats</small></span></label>
+          </div>
+          <div class="scan-mode-panel" data-scan-panel="message" role="tabpanel" hidden>
+            <label class="visually-hidden" for="message-input">Message to scan</label>
+            <textarea id="message-input" placeholder="Paste a message or email to check"></textarea>
+          </div>
+          <button class="scan-submit" type="button" data-scan-submit><span data-scan-action-label>Scan URL</span><span aria-hidden="true">◎</span></button>
+        </div>
+        <section class="analysis-card" aria-labelledby="analysis-title">
+          <div class="analysis-heading"><h2 id="analysis-title">Risk Analysis</h2></div>
+          <div class="analysis-alert" aria-hidden="true">▲</div>
+          <dl class="analysis-list">
+            <div><dt>Site Grade</dt><dd>F</dd></div>
+            <div><dt>Security Score</dt><dd>30 / 100</dd></div>
+            <div><dt>Synopsis</dt><dd>Malicious</dd></div>
+          </dl>
+        </section>
+      </div>
+    </main>
+
+    <script src="JS/app.js" defer></script>
+  </body>
+</html>
